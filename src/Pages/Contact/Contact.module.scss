@@ -1,0 +1,150 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
+  gap: 50px;
+
+  &_top {
+    display: flex;
+    padding: var(--top-padding) var(--sides-padding);
+    gap: 20px;
+    justify-content: space-between;
+    flex: 1;
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      max-width: 600px;
+      gap: 30px;
+
+      input {
+        min-height: 45px;
+        border-radius: 10px;
+        border: 2px solid var(--text-secondary);
+        background: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: fit-content;
+      gap: 5px;
+      width: 100%;
+
+      p {
+        position: absolute;
+        padding: 0 2px;
+        top: -10px;
+        left: 15px;
+        background: white;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--text-primary);
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      max-width: 600px;
+      height: 120px;
+      border-radius: 10px;
+      border: 2px solid var(--text-secondary);
+      resize: vertical;
+    }
+
+    @media (max-width: 720px) {
+      flex-direction: column;
+      div {
+        width: 100%;
+        max-width: 100%;
+      }
+      label {
+        width: 100%;
+      }
+      textarea {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  margin-top: 20px;
+
+  &_left {
+    padding: var(--top-padding) var(--sides-padding);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+
+      &:hover {
+        color: var(--text-secondary);
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  iframe {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    &_left {
+      width: 100%;
+      padding: var(--top-padding) var(--sides-padding);
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+    text-align: center;
+  }
+}

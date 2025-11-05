@@ -1,0 +1,66 @@
+.admin {
+  display: flex;
+  width: 100%;
+
+  &_sidebar {
+    position: sticky;
+    top: 0;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 24px;
+    height: 100vh;
+
+    &_logo {
+      color: #597a66;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Inter", sans-serif;
+
+      img {
+        height: 60px;
+        object-fit: contain;
+      }
+
+      &_text {
+        display: flex;
+        font-family: "Inter", sans-serif;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 26px;
+        align-items: flex-start;
+        letter-spacing: 2px;
+      }
+    }
+
+    &_links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+
+        svg {
+          font-size: 16px;
+        }
+      }
+    }
+
+    button {
+      border-radius: 10px;
+      height: 45px;
+      border: 1px solid black;
+      background: none;
+      font-size: 20px;
+    }
+  }
+}

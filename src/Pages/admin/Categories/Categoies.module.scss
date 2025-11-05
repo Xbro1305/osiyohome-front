@@ -1,0 +1,154 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  width: 100%;
+
+  &_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      input,
+      select {
+        height: 35px;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+
+      button {
+        cursor: pointer;
+        background: var(--text-secondary);
+        border-radius: 10px;
+        border: none;
+        height: 35px;
+        padding: 10px;
+        color: white;
+      }
+    }
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+        aspect-ratio: 8/5.6;
+      }
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #00000080;
+
+  &_body {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    flex-direction: column;
+
+    > button {
+      color: black;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 24px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+    input,
+    select,
+    button {
+      height: 35px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid black;
+      background: none;
+    }
+
+    section {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    button[type="submit"] {
+      background: var(--text-secondary);
+      border: none;
+      color: white;
+    }
+  }
+
+  &_photoLabel {
+    display: flex;
+    flex-direction: column;
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      cursor: pointer;
+      width: 150px;
+      height: 150px;
+      background: #f1f1f1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
