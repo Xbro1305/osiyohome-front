@@ -87,13 +87,13 @@ export const Home = () => {
           <p className="element-animation el">{t("homeArticle")}</p>
         </div>
       </div>
-      {sets.length != 0 && news.length != 0 && (
+      {(sets?.length != 0 || news?.length != 0) && (
         <div className={styles.home_categories}>
           <h1 className={`element-animation ${styles.home_title}`}>
             {t("newProducts")}
           </h1>
 
-          {news.length != 0 && (
+          {news?.length != 0 && (
             <div className={styles.home_categories_carousel}>
               <section>
                 <h2 className={`element-animation el ${styles.home_subtitle}`}>
@@ -109,7 +109,7 @@ export const Home = () => {
               <Carousel items={news} />
             </div>
           )}
-          {sets.length != 0 && (
+          {sets?.length != 0 && (
             <div className={styles.home_categories_carousel}>
               <section>
                 <h2 className={`element-animation el ${styles.home_subtitle}`}>
